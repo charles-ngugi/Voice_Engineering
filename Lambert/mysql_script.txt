@@ -1,0 +1,36 @@
+create table accounts(
+   id INT NOT NULL AUTO_INCREMENT,
+   name VARCHAR(100) NOT NULL,
+   account_number CHAR (20) NOT NULL,
+   id_no  INT NOT NULL,
+   pin INT NOT NULL,
+   balance INT NOT NULL,
+   phone_number CHAR (10) NOT NULL,
+   email VARCHAR(100) NOT NULL,
+   PRIMARY KEY ( id )
+);
+
+
+INSERT INTO accounts VALUES (
+	'Charles',
+	0160,
+	36387413,
+	2121,
+	20000,
+	0704661895
+);
+
+
+INSERT INTO accounts (name,account_number,id_no,pin,balance,phone_number,email)
+VALUES ('Charles',"0160",44444444,AES_ENCRYPT('3000', 'charlo'),90000,"0711111111","charles.ngugi@emalify.com");
+
+
+
+(AES_ENCRYPT('Obama', 'usa2010')
+SELECT AES_DECRYPT(pin, 'charlo') from accounts where id=3;
+
+
+ALTER TABLE accounts MODIFY pin VARBINARY(200) NOT NULL;    
+exten => acc,6,GotoIf($[${fetchid}]?9:16)
+
+
